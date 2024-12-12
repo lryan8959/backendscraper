@@ -1,0 +1,388 @@
+[debug] [2024-12-11T12:53:36.846Z] ----------------------------------------------------------------------
+[debug] [2024-12-11T12:53:36.850Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy --only functions
+[debug] [2024-12-11T12:53:36.850Z] CLI Version:   13.28.0
+[debug] [2024-12-11T12:53:36.851Z] Platform:      darwin
+[debug] [2024-12-11T12:53:36.851Z] Node Version:  v20.12.1
+[debug] [2024-12-11T12:53:36.851Z] Time:          Wed Dec 11 2024 17:53:36 GMT+0500 (Pakistan Standard Time)
+[debug] [2024-12-11T12:53:36.851Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-12-11T12:53:36.922Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-12-11T12:53:36.922Z] > authorizing via signed-in user (lryan8959@gmail.com)
+[debug] [2024-12-11T12:53:36.923Z] [iam] checking project ai-tools-6d313 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2024-12-11T12:53:36.924Z] Checked if tokens are valid: true, expires at: 1733923467492
+[debug] [2024-12-11T12:53:36.924Z] Checked if tokens are valid: true, expires at: 1733923467492
+[debug] [2024-12-11T12:53:36.925Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/ai-tools-6d313:testIamPermissions [none]
+[debug] [2024-12-11T12:53:36.925Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/ai-tools-6d313:testIamPermissions x-goog-quota-user=projects/ai-tools-6d313
+[debug] [2024-12-11T12:53:36.925Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/ai-tools-6d313:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2024-12-11T12:53:38.758Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/ai-tools-6d313:testIamPermissions 200
+[debug] [2024-12-11T12:53:38.759Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/ai-tools-6d313:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2024-12-11T12:53:38.759Z] Checked if tokens are valid: true, expires at: 1733923467492
+[debug] [2024-12-11T12:53:38.760Z] Checked if tokens are valid: true, expires at: 1733923467492
+[debug] [2024-12-11T12:53:38.760Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/ai-tools-6d313/serviceAccounts/ai-tools-6d313@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2024-12-11T12:53:38.760Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/ai-tools-6d313/serviceAccounts/ai-tools-6d313@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2024-12-11T12:53:40.595Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/ai-tools-6d313/serviceAccounts/ai-tools-6d313@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2024-12-11T12:53:40.595Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/ai-tools-6d313/serviceAccounts/ai-tools-6d313@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[info] 
+[info] === Deploying to 'ai-tools-6d313'...
+[info] 
+[info] i  deploying functions 
+[debug] [2024-12-11T12:53:40.599Z] Checked if tokens are valid: true, expires at: 1733923467492
+[debug] [2024-12-11T12:53:40.599Z] Checked if tokens are valid: true, expires at: 1733923467492
+[debug] [2024-12-11T12:53:40.599Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/ai-tools-6d313 [none]
+[debug] [2024-12-11T12:53:40.974Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/ai-tools-6d313 200
+[debug] [2024-12-11T12:53:40.974Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/ai-tools-6d313 {"projectNumber":"757878003660","projectId":"ai-tools-6d313","lifecycleState":"ACTIVE","name":"ai-tools","labels":{"firebase":"enabled"},"createTime":"2024-12-05T08:07:36.545293Z","parent":{"type":"organization","id":"980537884293"}}
+[info] i  functions: preparing codebase default for deployment 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[debug] [2024-12-11T12:53:40.975Z] Checked if tokens are valid: true, expires at: 1733923467492
+[debug] [2024-12-11T12:53:40.975Z] Checked if tokens are valid: true, expires at: 1733923467492
+[debug] [2024-12-11T12:53:40.975Z] Checked if tokens are valid: true, expires at: 1733923467492
+[debug] [2024-12-11T12:53:40.975Z] Checked if tokens are valid: true, expires at: 1733923467492
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[debug] [2024-12-11T12:53:40.976Z] Checked if tokens are valid: true, expires at: 1733923467492
+[debug] [2024-12-11T12:53:40.976Z] Checked if tokens are valid: true, expires at: 1733923467492
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2024-12-11T12:53:40.976Z] Checked if tokens are valid: true, expires at: 1733923467492
+[debug] [2024-12-11T12:53:40.976Z] Checked if tokens are valid: true, expires at: 1733923467492
+[debug] [2024-12-11T12:53:40.976Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/ai-tools-6d313/services/cloudfunctions.googleapis.com [none]
+[debug] [2024-12-11T12:53:40.976Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/ai-tools-6d313/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/ai-tools-6d313
+[debug] [2024-12-11T12:53:40.977Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/ai-tools-6d313/services/runtimeconfig.googleapis.com [none]
+[debug] [2024-12-11T12:53:40.977Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/ai-tools-6d313/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/ai-tools-6d313
+[debug] [2024-12-11T12:53:40.979Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/ai-tools-6d313/services/cloudbuild.googleapis.com [none]
+[debug] [2024-12-11T12:53:40.979Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/ai-tools-6d313/services/cloudbuild.googleapis.com x-goog-quota-user=projects/ai-tools-6d313
+[debug] [2024-12-11T12:53:40.980Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/ai-tools-6d313/services/artifactregistry.googleapis.com [none]
+[debug] [2024-12-11T12:53:40.980Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/ai-tools-6d313/services/artifactregistry.googleapis.com x-goog-quota-user=projects/ai-tools-6d313
+[debug] [2024-12-11T12:53:42.978Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/ai-tools-6d313/services/cloudbuild.googleapis.com 200
+[debug] [2024-12-11T12:53:42.978Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/ai-tools-6d313/services/cloudbuild.googleapis.com [omitted]
+[info] ✔  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2024-12-11T12:53:42.984Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/ai-tools-6d313/services/cloudfunctions.googleapis.com 200
+[debug] [2024-12-11T12:53:42.984Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/ai-tools-6d313/services/cloudfunctions.googleapis.com [omitted]
+[info] ✔  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2024-12-11T12:53:43.006Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/ai-tools-6d313/services/runtimeconfig.googleapis.com 200
+[debug] [2024-12-11T12:53:43.006Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/ai-tools-6d313/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2024-12-11T12:53:43.020Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/ai-tools-6d313/services/artifactregistry.googleapis.com 200
+[debug] [2024-12-11T12:53:43.021Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/ai-tools-6d313/services/artifactregistry.googleapis.com [omitted]
+[info] ✔  artifactregistry: required API artifactregistry.googleapis.com is enabled 
+[debug] [2024-12-11T12:53:43.021Z] Checked if tokens are valid: true, expires at: 1733923467492
+[debug] [2024-12-11T12:53:43.021Z] Checked if tokens are valid: true, expires at: 1733923467492
+[debug] [2024-12-11T12:53:43.021Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/ai-tools-6d313/adminSdkConfig [none]
+[debug] [2024-12-11T12:53:44.015Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/ai-tools-6d313/adminSdkConfig 200
+[debug] [2024-12-11T12:53:44.015Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/ai-tools-6d313/adminSdkConfig {"projectId":"ai-tools-6d313","databaseURL":"https://ai-tools-6d313-default-rtdb.firebaseio.com","storageBucket":"ai-tools-6d313.firebasestorage.app"}
+[debug] [2024-12-11T12:53:44.016Z] Checked if tokens are valid: true, expires at: 1733923467492
+[debug] [2024-12-11T12:53:44.016Z] Checked if tokens are valid: true, expires at: 1733923467492
+[debug] [2024-12-11T12:53:44.016Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/ai-tools-6d313/configs [none]
+[debug] [2024-12-11T12:53:45.018Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/ai-tools-6d313/configs 200
+[debug] [2024-12-11T12:53:45.018Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/ai-tools-6d313/configs {}
+[debug] [2024-12-11T12:53:45.020Z] Validating nodejs source
+[debug] [2024-12-11T12:53:46.575Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "cheerio": "^1.0.0",
+    "chrome-aws-lambda": "^10.1.0",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "firebase-admin": "^12.7.0",
+    "firebase-functions": "^6.1.2",
+    "googleapis": "^144.0.0",
+    "puppeteer": "^23.10.3",
+    "puppeteer-core": "^23.10.3"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-12-11T12:53:46.575Z] Building nodejs source
+[info] i  functions: Loading and analyzing source code for codebase default to determine what to deploy 
+[debug] [2024-12-11T12:53:46.577Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-12-11T12:53:46.584Z] Found firebase-functions binary at '/Users/mac/Desktop/create-react-app/backend/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8535
+
+[debug] [2024-12-11T12:53:49.081Z] Got response from /__/functions.yaml {"endpoints":{"scrapeTools":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"scrapeTools"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[info] i  extensions: ensuring required API firebaseextensions.googleapis.com is enabled... 
+[debug] [2024-12-11T12:53:54.115Z] Checked if tokens are valid: true, expires at: 1733923467492
+[debug] [2024-12-11T12:53:54.115Z] Checked if tokens are valid: true, expires at: 1733923467492
+[debug] [2024-12-11T12:53:54.115Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/ai-tools-6d313/services/firebaseextensions.googleapis.com [none]
+[debug] [2024-12-11T12:53:54.115Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/ai-tools-6d313/services/firebaseextensions.googleapis.com x-goog-quota-user=projects/ai-tools-6d313
+[debug] [2024-12-11T12:53:55.938Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/ai-tools-6d313/services/firebaseextensions.googleapis.com 200
+[debug] [2024-12-11T12:53:55.938Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/ai-tools-6d313/services/firebaseextensions.googleapis.com [omitted]
+[info] ✔  extensions: required API firebaseextensions.googleapis.com is enabled 
+[debug] [2024-12-11T12:53:55.938Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-12-11T12:53:55.938Z] > authorizing via signed-in user (lryan8959@gmail.com)
+[debug] [2024-12-11T12:53:55.938Z] [iam] checking project ai-tools-6d313 for permissions ["firebase.projects.get","firebaseextensions.instances.list"]
+[debug] [2024-12-11T12:53:55.939Z] Checked if tokens are valid: true, expires at: 1733923467492
+[debug] [2024-12-11T12:53:55.939Z] Checked if tokens are valid: true, expires at: 1733923467492
+[debug] [2024-12-11T12:53:55.939Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/ai-tools-6d313:testIamPermissions [none]
+[debug] [2024-12-11T12:53:55.939Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/ai-tools-6d313:testIamPermissions x-goog-quota-user=projects/ai-tools-6d313
+[debug] [2024-12-11T12:53:55.939Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/ai-tools-6d313:testIamPermissions {"permissions":["firebase.projects.get","firebaseextensions.instances.list"]}
+[debug] [2024-12-11T12:53:57.574Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/ai-tools-6d313:testIamPermissions 200
+[debug] [2024-12-11T12:53:57.574Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/ai-tools-6d313:testIamPermissions {"permissions":["firebase.projects.get","firebaseextensions.instances.list"]}
+[debug] [2024-12-11T12:53:57.575Z] Checked if tokens are valid: true, expires at: 1733923467492
+[debug] [2024-12-11T12:53:57.575Z] Checked if tokens are valid: true, expires at: 1733923467492
+[debug] [2024-12-11T12:53:57.576Z] >>> [apiv2][query] GET https://firebaseextensions.googleapis.com/v1beta/projects/ai-tools-6d313/instances pageSize=100&pageToken=
+[debug] [2024-12-11T12:53:59.538Z] <<< [apiv2][status] GET https://firebaseextensions.googleapis.com/v1beta/projects/ai-tools-6d313/instances 200
+[debug] [2024-12-11T12:53:59.538Z] <<< [apiv2][body] GET https://firebaseextensions.googleapis.com/v1beta/projects/ai-tools-6d313/instances {}
+[info] i  functions: preparing functions directory for uploading... 
+[info] i  functions: packaged /Users/mac/Desktop/create-react-app/backend/functions (78.29 KB) for uploading 
+[debug] [2024-12-11T12:53:59.588Z] Checked if tokens are valid: true, expires at: 1733923467492
+[debug] [2024-12-11T12:53:59.588Z] Checked if tokens are valid: true, expires at: 1733923467492
+[debug] [2024-12-11T12:53:59.589Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/projects/ai-tools-6d313/locations/-/functions [none]
+[debug] [2024-12-11T12:54:00.871Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/projects/ai-tools-6d313/locations/-/functions 200
+[debug] [2024-12-11T12:54:00.872Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/projects/ai-tools-6d313/locations/-/functions {}
+[debug] [2024-12-11T12:54:00.872Z] Checked if tokens are valid: true, expires at: 1733923467492
+[debug] [2024-12-11T12:54:00.872Z] Checked if tokens are valid: true, expires at: 1733923467492
+[debug] [2024-12-11T12:54:00.872Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/ai-tools-6d313/locations/-/functions filter=environment%3D%22GEN_2%22
+[debug] [2024-12-11T12:54:02.033Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/ai-tools-6d313/locations/-/functions 200
+[debug] [2024-12-11T12:54:02.033Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/ai-tools-6d313/locations/-/functions {"functions":[{"name":"projects/ai-tools-6d313/locations/us-central1/functions/scrapeTools","buildConfig":{"build":"projects/757878003660/locations/us-central1/builds/c5e1088f-9240-4f2a-957b-c216c8acbce7","runtime":"nodejs18","entryPoint":"scrapeTools","source":{"storageSource":{"bucket":"gcf-v2-sources-757878003660-us-central1","object":"scrapeTools/function-source.zip","generation":"1733920236299582"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/ai-tools-6d313/locations/us-central1/repositories/gcf-artifacts","sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-757878003660-us-central1","object":"scrapeTools/function-source.zip","generation":"1733920236299582"}},"dockerRegistry":"ARTIFACT_REGISTRY","serviceAccount":"projects/ai-tools-6d313/serviceAccounts/757878003660-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/ai-tools-6d313/locations/us-central1/services/scrapetools","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"ai-tools-6d313\",\"databaseURL\":\"https://ai-tools-6d313-default-rtdb.firebaseio.com\",\"storageBucket\":\"ai-tools-6d313.firebasestorage.app\"}","GCLOUD_PROJECT":"ai-tools-6d313","EVENTARC_CLOUD_EVENT_SOURCE":"projects/ai-tools-6d313/locations/us-central1/services/scrapeTools","FUNCTION_TARGET":"scrapeTools","LOG_EXECUTION_ID":"true"},"maxInstanceCount":100,"ingressSettings":"ALLOW_ALL","uri":"https://scrapetools-paa7ytvw4q-uc.a.run.app","serviceAccountEmail":"757878003660-compute@developer.gserviceaccount.com","availableMemory":"256Mi","allTrafficOnLatestRevision":true,"revision":"scrapetools-00001-qoq","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"state":"ACTIVE","updateTime":"2024-12-11T12:32:07.052367581Z","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"bbc4310686d64d44ceea0507f16b8932927129ad"},"environment":"GEN_2","url":"https://us-central1-ai-tools-6d313.cloudfunctions.net/scrapeTools","createTime":"2024-12-11T12:30:36.571258596Z"}]}
+[info] i  functions: ensuring required API run.googleapis.com is enabled... 
+[debug] [2024-12-11T12:54:02.035Z] Checked if tokens are valid: true, expires at: 1733923467492
+[debug] [2024-12-11T12:54:02.035Z] Checked if tokens are valid: true, expires at: 1733923467492
+[info] i  functions: ensuring required API eventarc.googleapis.com is enabled... 
+[debug] [2024-12-11T12:54:02.036Z] Checked if tokens are valid: true, expires at: 1733923467492
+[debug] [2024-12-11T12:54:02.036Z] Checked if tokens are valid: true, expires at: 1733923467492
+[info] i  functions: ensuring required API pubsub.googleapis.com is enabled... 
+[debug] [2024-12-11T12:54:02.036Z] Checked if tokens are valid: true, expires at: 1733923467492
+[debug] [2024-12-11T12:54:02.036Z] Checked if tokens are valid: true, expires at: 1733923467492
+[info] i  functions: ensuring required API storage.googleapis.com is enabled... 
+[debug] [2024-12-11T12:54:02.036Z] Checked if tokens are valid: true, expires at: 1733923467492
+[debug] [2024-12-11T12:54:02.036Z] Checked if tokens are valid: true, expires at: 1733923467492
+[debug] [2024-12-11T12:54:02.036Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/ai-tools-6d313/services/run.googleapis.com [none]
+[debug] [2024-12-11T12:54:02.036Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/ai-tools-6d313/services/run.googleapis.com x-goog-quota-user=projects/ai-tools-6d313
+[debug] [2024-12-11T12:54:02.038Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/ai-tools-6d313/services/eventarc.googleapis.com [none]
+[debug] [2024-12-11T12:54:02.038Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/ai-tools-6d313/services/eventarc.googleapis.com x-goog-quota-user=projects/ai-tools-6d313
+[debug] [2024-12-11T12:54:02.040Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/ai-tools-6d313/services/pubsub.googleapis.com [none]
+[debug] [2024-12-11T12:54:02.040Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/ai-tools-6d313/services/pubsub.googleapis.com x-goog-quota-user=projects/ai-tools-6d313
+[debug] [2024-12-11T12:54:02.042Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/ai-tools-6d313/services/storage.googleapis.com [none]
+[debug] [2024-12-11T12:54:02.042Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/ai-tools-6d313/services/storage.googleapis.com x-goog-quota-user=projects/ai-tools-6d313
+[debug] [2024-12-11T12:54:03.875Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/ai-tools-6d313/services/run.googleapis.com 200
+[debug] [2024-12-11T12:54:03.875Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/ai-tools-6d313/services/run.googleapis.com [omitted]
+[info] ✔  functions: required API run.googleapis.com is enabled 
+[debug] [2024-12-11T12:54:03.878Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/ai-tools-6d313/services/storage.googleapis.com 200
+[debug] [2024-12-11T12:54:03.878Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/ai-tools-6d313/services/storage.googleapis.com [omitted]
+[info] ✔  functions: required API storage.googleapis.com is enabled 
+[debug] [2024-12-11T12:54:03.879Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/ai-tools-6d313/services/eventarc.googleapis.com 200
+[debug] [2024-12-11T12:54:03.879Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/ai-tools-6d313/services/eventarc.googleapis.com [omitted]
+[info] ✔  functions: required API eventarc.googleapis.com is enabled 
+[debug] [2024-12-11T12:54:03.901Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/ai-tools-6d313/services/pubsub.googleapis.com 200
+[debug] [2024-12-11T12:54:03.901Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/ai-tools-6d313/services/pubsub.googleapis.com [omitted]
+[info] ✔  functions: required API pubsub.googleapis.com is enabled 
+[info] i  functions: generating the service identity for pubsub.googleapis.com... 
+[debug] [2024-12-11T12:54:03.902Z] Checked if tokens are valid: true, expires at: 1733923467492
+[debug] [2024-12-11T12:54:03.902Z] Checked if tokens are valid: true, expires at: 1733923467492
+[info] i  functions: generating the service identity for eventarc.googleapis.com... 
+[debug] [2024-12-11T12:54:03.902Z] Checked if tokens are valid: true, expires at: 1733923467492
+[debug] [2024-12-11T12:54:03.902Z] Checked if tokens are valid: true, expires at: 1733923467492
+[debug] [2024-12-11T12:54:03.902Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/757878003660/services/pubsub.googleapis.com:generateServiceIdentity [none]
+[debug] [2024-12-11T12:54:03.902Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/757878003660/services/eventarc.googleapis.com:generateServiceIdentity [none]
+[debug] [2024-12-11T12:54:04.562Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/757878003660/services/pubsub.googleapis.com:generateServiceIdentity 200
+[debug] [2024-12-11T12:54:04.562Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/757878003660/services/pubsub.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-757878003660@gcp-sa-pubsub.iam.gserviceaccount.com","uniqueId":"106352474414251653711"}}
+[debug] [2024-12-11T12:54:04.790Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/757878003660/services/eventarc.googleapis.com:generateServiceIdentity 200
+[debug] [2024-12-11T12:54:04.790Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/757878003660/services/eventarc.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-757878003660@gcp-sa-eventarc.iam.gserviceaccount.com","uniqueId":"107328528018488303220"}}
+[debug] [2024-12-11T12:54:04.792Z] Checked if tokens are valid: true, expires at: 1733923467492
+[debug] [2024-12-11T12:54:04.792Z] Checked if tokens are valid: true, expires at: 1733923467492
+[debug] [2024-12-11T12:54:04.792Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/ai-tools-6d313 [none]
+[debug] [2024-12-11T12:54:06.184Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/ai-tools-6d313 200
+[debug] [2024-12-11T12:54:06.184Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/ai-tools-6d313 {"projectNumber":"757878003660","projectId":"ai-tools-6d313","lifecycleState":"ACTIVE","name":"ai-tools","labels":{"firebase":"enabled"},"createTime":"2024-12-05T08:07:36.545293Z","parent":{"type":"organization","id":"980537884293"}}
+[debug] [2024-12-11T12:54:06.185Z] Checked if tokens are valid: true, expires at: 1733923467492
+[debug] [2024-12-11T12:54:06.185Z] Checked if tokens are valid: true, expires at: 1733923467492
+[debug] [2024-12-11T12:54:06.185Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/ai-tools-6d313/billingInfo [none]
+[debug] [2024-12-11T12:54:06.985Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/ai-tools-6d313/billingInfo 200
+[debug] [2024-12-11T12:54:06.985Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/ai-tools-6d313/billingInfo {"name":"projects/ai-tools-6d313/billingInfo","projectId":"ai-tools-6d313","billingAccountName":"billingAccounts/01F353-FE8845-C13607","billingEnabled":true}
+[debug] [2024-12-11T12:54:06.987Z] Checked if tokens are valid: true, expires at: 1733923467492
+[debug] [2024-12-11T12:54:06.987Z] Checked if tokens are valid: true, expires at: 1733923467492
+[debug] [2024-12-11T12:54:06.987Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v2/projects/ai-tools-6d313/locations/us-central1/functions:generateUploadUrl [none]
+[debug] [2024-12-11T12:54:08.002Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v2/projects/ai-tools-6d313/locations/us-central1/functions:generateUploadUrl 200
+[debug] [2024-12-11T12:54:08.002Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/ai-tools-6d313/locations/us-central1/functions:generateUploadUrl {"uploadUrl":"https://storage.googleapis.com/gcf-v2-uploads-757878003660.us-central1.cloudfunctions.appspot.com/5204fcc3-c746-4f75-b333-9165b65dc484.zip?GoogleAccessId=service-757878003660@gcf-admin-robot.iam.gserviceaccount.com&Expires=1733923448&Signature=BJ5lfoNcVdJZgXPDctdMwrjjKXfhQfpYRWvl4FEE0s3pqTaBm7BA5r7il6UUXZx9K%2BuYy1c9yqzkjnmofimMMAen4IliG%2BPV2U9Xaw8E7BS%2B0Rapf0DDzRa48IHL1EtvCMYg6%2BLRkZbBf%2BNW0nAkVl7mTozUxWZtNVbJXkIrjKTuY80h%2FZqyGXHQPmG%2BGnB6LDExGs6ADVWy0sVyeDG9Y6m5yTZNiVMouxit8CU3tmLXlxItQek%2FAKQQtXs14rxZ4eAwzOj%2FrhVFe1W%2FVoyqBl6nBVswm69dKkAgKQwJoTKbTr0KirKceAuZuDf2yyR8TDst7RfQeMpyfZBnWYcBsA%3D%3D","storageSource":{"bucket":"gcf-v2-uploads-757878003660.us-central1.cloudfunctions.appspot.com","object":"5204fcc3-c746-4f75-b333-9165b65dc484.zip"}}
+[debug] [2024-12-11T12:54:08.003Z] >>> [apiv2][query] PUT https://storage.googleapis.com/gcf-v2-uploads-757878003660.us-central1.cloudfunctions.appspot.com/5204fcc3-c746-4f75-b333-9165b65dc484.zip GoogleAccessId=service-757878003660%40gcf-admin-robot.iam.gserviceaccount.com&Expires=1733923448&Signature=BJ5lfoNcVdJZgXPDctdMwrjjKXfhQfpYRWvl4FEE0s3pqTaBm7BA5r7il6UUXZx9K%2BuYy1c9yqzkjnmofimMMAen4IliG%2BPV2U9Xaw8E7BS%2B0Rapf0DDzRa48IHL1EtvCMYg6%2BLRkZbBf%2BNW0nAkVl7mTozUxWZtNVbJXkIrjKTuY80h%2FZqyGXHQPmG%2BGnB6LDExGs6ADVWy0sVyeDG9Y6m5yTZNiVMouxit8CU3tmLXlxItQek%2FAKQQtXs14rxZ4eAwzOj%2FrhVFe1W%2FVoyqBl6nBVswm69dKkAgKQwJoTKbTr0KirKceAuZuDf2yyR8TDst7RfQeMpyfZBnWYcBsA%3D%3D
+[debug] [2024-12-11T12:54:08.003Z] >>> [apiv2][body] PUT https://storage.googleapis.com/gcf-v2-uploads-757878003660.us-central1.cloudfunctions.appspot.com/5204fcc3-c746-4f75-b333-9165b65dc484.zip [stream]
+[debug] [2024-12-11T12:54:09.577Z] <<< [apiv2][status] PUT https://storage.googleapis.com/gcf-v2-uploads-757878003660.us-central1.cloudfunctions.appspot.com/5204fcc3-c746-4f75-b333-9165b65dc484.zip 200
+[debug] [2024-12-11T12:54:09.577Z] <<< [apiv2][body] PUT https://storage.googleapis.com/gcf-v2-uploads-757878003660.us-central1.cloudfunctions.appspot.com/5204fcc3-c746-4f75-b333-9165b65dc484.zip [omitted]
+[info] ✔  functions: functions folder uploaded successfully 
+[info] i  functions: updating Node.js 18 (2nd Gen) function scrapeTools(us-central1)... 
+[debug] [2024-12-11T12:54:09.581Z] Checked if tokens are valid: true, expires at: 1733923467492
+[debug] [2024-12-11T12:54:09.581Z] Checked if tokens are valid: true, expires at: 1733923467492
+[debug] [2024-12-11T12:54:09.582Z] >>> [apiv2][query] PATCH https://cloudfunctions.googleapis.com/v2/projects/ai-tools-6d313/locations/us-central1/functions/scrapeTools updateMask=name%2CbuildConfig.runtime%2CbuildConfig.entryPoint%2CbuildConfig.source.storageSource.bucket%2CbuildConfig.source.storageSource.object%2CbuildConfig.environmentVariables%2CbuildConfig.sourceToken%2CserviceConfig.environmentVariables%2CserviceConfig.ingressSettings%2CserviceConfig.timeoutSeconds%2CserviceConfig.serviceAccountEmail%2CserviceConfig.availableMemory%2CserviceConfig.minInstanceCount%2CserviceConfig.maxInstanceCount%2CserviceConfig.maxInstanceRequestConcurrency%2CserviceConfig.availableCpu%2CserviceConfig.vpcConnector%2CserviceConfig.vpcConnectorEgressSettings%2Clabels%2CbuildConfig.buildEnvironmentVariables
+[debug] [2024-12-11T12:54:09.582Z] >>> [apiv2][body] PATCH https://cloudfunctions.googleapis.com/v2/projects/ai-tools-6d313/locations/us-central1/functions/scrapeTools {"name":"projects/ai-tools-6d313/locations/us-central1/functions/scrapeTools","buildConfig":{"runtime":"nodejs18","entryPoint":"scrapeTools","source":{"storageSource":{"bucket":"gcf-v2-uploads-757878003660.us-central1.cloudfunctions.appspot.com","object":"5204fcc3-c746-4f75-b333-9165b65dc484.zip"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""}},"serviceConfig":{"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"ai-tools-6d313\",\"databaseURL\":\"https://ai-tools-6d313-default-rtdb.firebaseio.com\",\"storageBucket\":\"ai-tools-6d313.firebasestorage.app\"}","GCLOUD_PROJECT":"ai-tools-6d313","EVENTARC_CLOUD_EVENT_SOURCE":"projects/ai-tools-6d313/locations/us-central1/services/scrapeTools","FUNCTION_TARGET":"scrapeTools","LOG_EXECUTION_ID":"true"},"ingressSettings":null,"timeoutSeconds":null,"serviceAccountEmail":null,"availableMemory":"256Mi","minInstanceCount":null,"maxInstanceCount":null,"maxInstanceRequestConcurrency":80,"availableCpu":"1","vpcConnector":null,"vpcConnectorEgressSettings":null},"labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"ba5982bc5bb793768822ebd53b90a22a7263b1a6"}}
+[debug] [2024-12-11T12:54:11.324Z] <<< [apiv2][status] PATCH https://cloudfunctions.googleapis.com/v2/projects/ai-tools-6d313/locations/us-central1/functions/scrapeTools 200
+[debug] [2024-12-11T12:54:11.324Z] <<< [apiv2][body] PATCH https://cloudfunctions.googleapis.com/v2/projects/ai-tools-6d313/locations/us-central1/functions/scrapeTools {"name":"projects/ai-tools-6d313/locations/us-central1/operations/operation-1733921650574-628fe180d03e3-75a008f9-156bb725","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2024-12-11T12:54:11.365459709Z","target":"projects/ai-tools-6d313/locations/us-central1/functions/scrapeTools","verb":"update","cancelRequested":false,"apiVersion":"v2"},"done":false}
+[debug] [2024-12-11T12:54:11.325Z] Checked if tokens are valid: true, expires at: 1733923467492
+[debug] [2024-12-11T12:54:11.325Z] Checked if tokens are valid: true, expires at: 1733923467492
+[debug] [2024-12-11T12:54:11.325Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/ai-tools-6d313/locations/us-central1/operations/operation-1733921650574-628fe180d03e3-75a008f9-156bb725 [none]
+[debug] [2024-12-11T12:54:11.724Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/ai-tools-6d313/locations/us-central1/operations/operation-1733921650574-628fe180d03e3-75a008f9-156bb725 200
+[debug] [2024-12-11T12:54:11.724Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/ai-tools-6d313/locations/us-central1/operations/operation-1733921650574-628fe180d03e3-75a008f9-156bb725 {"name":"projects/ai-tools-6d313/locations/us-central1/operations/operation-1733921650574-628fe180d03e3-75a008f9-156bb725","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2024-12-11T12:54:11.365459709Z","target":"projects/ai-tools-6d313/locations/us-central1/functions/scrapeTools","verb":"update","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/ai-tools-6d313/locations/us-central1/functions/scrapeTools","buildConfig":{"runtime":"nodejs18","entryPoint":"scrapeTools","source":{"storageSource":{"bucket":"gcf-v2-sources-757878003660-us-central1","object":"scrapeTools/function-source.zip","generation":"1733921651293082"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/ai-tools-6d313/locations/us-central1/repositories/gcf-artifacts","sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-757878003660-us-central1","object":"scrapeTools/function-source.zip","generation":"1733920236299582"}},"dockerRegistry":"ARTIFACT_REGISTRY","serviceAccount":"projects/ai-tools-6d313/serviceAccounts/757878003660-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/ai-tools-6d313/locations/us-central1/services/scrapetools","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"ai-tools-6d313\",\"databaseURL\":\"https://ai-tools-6d313-default-rtdb.firebaseio.com\",\"storageBucket\":\"ai-tools-6d313.firebasestorage.app\"}","GCLOUD_PROJECT":"ai-tools-6d313","EVENTARC_CLOUD_EVENT_SOURCE":"projects/ai-tools-6d313/locations/us-central1/services/scrapeTools","FUNCTION_TARGET":"scrapeTools","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","uri":"https://scrapetools-paa7ytvw4q-uc.a.run.app","serviceAccountEmail":"757878003660-compute@developer.gserviceaccount.com","availableMemory":"256Mi","allTrafficOnLatestRevision":true,"revision":"scrapetools-00001-qoq","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"state":"ACTIVE","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"ba5982bc5bb793768822ebd53b90a22a7263b1a6"},"environment":"GEN_2","url":"https://us-central1-ai-tools-6d313.cloudfunctions.net/scrapeTools"},"stages":[{"name":"BUILD","state":"NOT_STARTED"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"UPDATE_FUNCTION"},"done":false}
+[debug] [2024-12-11T12:54:12.224Z] [update-default-us-central1-scrapeTools] Retrying task index 0
+[debug] [2024-12-11T12:54:12.225Z] Checked if tokens are valid: true, expires at: 1733923467492
+[debug] [2024-12-11T12:54:12.225Z] Checked if tokens are valid: true, expires at: 1733923467492
+[debug] [2024-12-11T12:54:12.225Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/ai-tools-6d313/locations/us-central1/operations/operation-1733921650574-628fe180d03e3-75a008f9-156bb725 [none]
+[debug] [2024-12-11T12:54:12.634Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/ai-tools-6d313/locations/us-central1/operations/operation-1733921650574-628fe180d03e3-75a008f9-156bb725 200
+[debug] [2024-12-11T12:54:12.634Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/ai-tools-6d313/locations/us-central1/operations/operation-1733921650574-628fe180d03e3-75a008f9-156bb725 {"name":"projects/ai-tools-6d313/locations/us-central1/operations/operation-1733921650574-628fe180d03e3-75a008f9-156bb725","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2024-12-11T12:54:11.365459709Z","target":"projects/ai-tools-6d313/locations/us-central1/functions/scrapeTools","verb":"update","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/ai-tools-6d313/locations/us-central1/functions/scrapeTools","buildConfig":{"runtime":"nodejs18","entryPoint":"scrapeTools","source":{"storageSource":{"bucket":"gcf-v2-sources-757878003660-us-central1","object":"scrapeTools/function-source.zip","generation":"1733921651293082"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/ai-tools-6d313/locations/us-central1/repositories/gcf-artifacts","sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-757878003660-us-central1","object":"scrapeTools/function-source.zip","generation":"1733920236299582"}},"dockerRegistry":"ARTIFACT_REGISTRY","serviceAccount":"projects/ai-tools-6d313/serviceAccounts/757878003660-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/ai-tools-6d313/locations/us-central1/services/scrapetools","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"ai-tools-6d313\",\"databaseURL\":\"https://ai-tools-6d313-default-rtdb.firebaseio.com\",\"storageBucket\":\"ai-tools-6d313.firebasestorage.app\"}","GCLOUD_PROJECT":"ai-tools-6d313","EVENTARC_CLOUD_EVENT_SOURCE":"projects/ai-tools-6d313/locations/us-central1/services/scrapeTools","FUNCTION_TARGET":"scrapeTools","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","uri":"https://scrapetools-paa7ytvw4q-uc.a.run.app","serviceAccountEmail":"757878003660-compute@developer.gserviceaccount.com","availableMemory":"256Mi","allTrafficOnLatestRevision":true,"revision":"scrapetools-00001-qoq","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"state":"ACTIVE","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"ba5982bc5bb793768822ebd53b90a22a7263b1a6"},"environment":"GEN_2","url":"https://us-central1-ai-tools-6d313.cloudfunctions.net/scrapeTools"},"stages":[{"name":"BUILD","message":"Build in progress","state":"IN_PROGRESS","resource":"projects/757878003660/locations/us-central1/builds/e75fa158-6fa2-43c8-907e-88939d4e4f88","resourceUri":"https://console.cloud.google.com/cloud-build/builds;region=us-central1/e75fa158-6fa2-43c8-907e-88939d4e4f88?project=757878003660"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"UPDATE_FUNCTION","buildName":"projects/757878003660/locations/us-central1/builds/e75fa158-6fa2-43c8-907e-88939d4e4f88"},"done":false}
+[debug] [2024-12-11T12:54:13.635Z] [update-default-us-central1-scrapeTools] Retrying task index 0
+[debug] [2024-12-11T12:54:13.636Z] Checked if tokens are valid: true, expires at: 1733923467492
+[debug] [2024-12-11T12:54:13.636Z] Checked if tokens are valid: true, expires at: 1733923467492
+[debug] [2024-12-11T12:54:13.636Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/ai-tools-6d313/locations/us-central1/operations/operation-1733921650574-628fe180d03e3-75a008f9-156bb725 [none]
+[debug] [2024-12-11T12:54:14.516Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/ai-tools-6d313/locations/us-central1/operations/operation-1733921650574-628fe180d03e3-75a008f9-156bb725 200
+[debug] [2024-12-11T12:54:14.516Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/ai-tools-6d313/locations/us-central1/operations/operation-1733921650574-628fe180d03e3-75a008f9-156bb725 {"name":"projects/ai-tools-6d313/locations/us-central1/operations/operation-1733921650574-628fe180d03e3-75a008f9-156bb725","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2024-12-11T12:54:11.365459709Z","target":"projects/ai-tools-6d313/locations/us-central1/functions/scrapeTools","verb":"update","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/ai-tools-6d313/locations/us-central1/functions/scrapeTools","buildConfig":{"runtime":"nodejs18","entryPoint":"scrapeTools","source":{"storageSource":{"bucket":"gcf-v2-sources-757878003660-us-central1","object":"scrapeTools/function-source.zip","generation":"1733921651293082"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/ai-tools-6d313/locations/us-central1/repositories/gcf-artifacts","sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-757878003660-us-central1","object":"scrapeTools/function-source.zip","generation":"1733920236299582"}},"dockerRegistry":"ARTIFACT_REGISTRY","serviceAccount":"projects/ai-tools-6d313/serviceAccounts/757878003660-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/ai-tools-6d313/locations/us-central1/services/scrapetools","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"ai-tools-6d313\",\"databaseURL\":\"https://ai-tools-6d313-default-rtdb.firebaseio.com\",\"storageBucket\":\"ai-tools-6d313.firebasestorage.app\"}","GCLOUD_PROJECT":"ai-tools-6d313","EVENTARC_CLOUD_EVENT_SOURCE":"projects/ai-tools-6d313/locations/us-central1/services/scrapeTools","FUNCTION_TARGET":"scrapeTools","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","uri":"https://scrapetools-paa7ytvw4q-uc.a.run.app","serviceAccountEmail":"757878003660-compute@developer.gserviceaccount.com","availableMemory":"256Mi","allTrafficOnLatestRevision":true,"revision":"scrapetools-00001-qoq","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"state":"ACTIVE","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"ba5982bc5bb793768822ebd53b90a22a7263b1a6"},"environment":"GEN_2","url":"https://us-central1-ai-tools-6d313.cloudfunctions.net/scrapeTools"},"stages":[{"name":"BUILD","message":"Build in progress","state":"IN_PROGRESS","resource":"projects/757878003660/locations/us-central1/builds/e75fa158-6fa2-43c8-907e-88939d4e4f88","resourceUri":"https://console.cloud.google.com/cloud-build/builds;region=us-central1/e75fa158-6fa2-43c8-907e-88939d4e4f88?project=757878003660"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"UPDATE_FUNCTION","buildName":"projects/757878003660/locations/us-central1/builds/e75fa158-6fa2-43c8-907e-88939d4e4f88"},"done":false}
+[debug] [2024-12-11T12:54:16.516Z] [update-default-us-central1-scrapeTools] Retrying task index 0
+[debug] [2024-12-11T12:54:16.517Z] Checked if tokens are valid: true, expires at: 1733923467492
+[debug] [2024-12-11T12:54:16.517Z] Checked if tokens are valid: true, expires at: 1733923467492
+[debug] [2024-12-11T12:54:16.517Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/ai-tools-6d313/locations/us-central1/operations/operation-1733921650574-628fe180d03e3-75a008f9-156bb725 [none]
+[debug] [2024-12-11T12:54:17.412Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/ai-tools-6d313/locations/us-central1/operations/operation-1733921650574-628fe180d03e3-75a008f9-156bb725 200
+[debug] [2024-12-11T12:54:17.412Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/ai-tools-6d313/locations/us-central1/operations/operation-1733921650574-628fe180d03e3-75a008f9-156bb725 {"name":"projects/ai-tools-6d313/locations/us-central1/operations/operation-1733921650574-628fe180d03e3-75a008f9-156bb725","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2024-12-11T12:54:11.365459709Z","target":"projects/ai-tools-6d313/locations/us-central1/functions/scrapeTools","verb":"update","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/ai-tools-6d313/locations/us-central1/functions/scrapeTools","buildConfig":{"runtime":"nodejs18","entryPoint":"scrapeTools","source":{"storageSource":{"bucket":"gcf-v2-sources-757878003660-us-central1","object":"scrapeTools/function-source.zip","generation":"1733921651293082"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/ai-tools-6d313/locations/us-central1/repositories/gcf-artifacts","sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-757878003660-us-central1","object":"scrapeTools/function-source.zip","generation":"1733920236299582"}},"dockerRegistry":"ARTIFACT_REGISTRY","serviceAccount":"projects/ai-tools-6d313/serviceAccounts/757878003660-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/ai-tools-6d313/locations/us-central1/services/scrapetools","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"ai-tools-6d313\",\"databaseURL\":\"https://ai-tools-6d313-default-rtdb.firebaseio.com\",\"storageBucket\":\"ai-tools-6d313.firebasestorage.app\"}","GCLOUD_PROJECT":"ai-tools-6d313","EVENTARC_CLOUD_EVENT_SOURCE":"projects/ai-tools-6d313/locations/us-central1/services/scrapeTools","FUNCTION_TARGET":"scrapeTools","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","uri":"https://scrapetools-paa7ytvw4q-uc.a.run.app","serviceAccountEmail":"757878003660-compute@developer.gserviceaccount.com","availableMemory":"256Mi","allTrafficOnLatestRevision":true,"revision":"scrapetools-00001-qoq","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"state":"ACTIVE","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"ba5982bc5bb793768822ebd53b90a22a7263b1a6"},"environment":"GEN_2","url":"https://us-central1-ai-tools-6d313.cloudfunctions.net/scrapeTools"},"stages":[{"name":"BUILD","message":"Build in progress","state":"IN_PROGRESS","resource":"projects/757878003660/locations/us-central1/builds/e75fa158-6fa2-43c8-907e-88939d4e4f88","resourceUri":"https://console.cloud.google.com/cloud-build/builds;region=us-central1/e75fa158-6fa2-43c8-907e-88939d4e4f88?project=757878003660"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"UPDATE_FUNCTION","buildName":"projects/757878003660/locations/us-central1/builds/e75fa158-6fa2-43c8-907e-88939d4e4f88"},"done":false}
+[debug] [2024-12-11T12:54:21.414Z] [update-default-us-central1-scrapeTools] Retrying task index 0
+[debug] [2024-12-11T12:54:21.414Z] Checked if tokens are valid: true, expires at: 1733923467492
+[debug] [2024-12-11T12:54:21.414Z] Checked if tokens are valid: true, expires at: 1733923467492
+[debug] [2024-12-11T12:54:21.414Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/ai-tools-6d313/locations/us-central1/operations/operation-1733921650574-628fe180d03e3-75a008f9-156bb725 [none]
+[debug] [2024-12-11T12:54:22.284Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/ai-tools-6d313/locations/us-central1/operations/operation-1733921650574-628fe180d03e3-75a008f9-156bb725 200
+[debug] [2024-12-11T12:54:22.284Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/ai-tools-6d313/locations/us-central1/operations/operation-1733921650574-628fe180d03e3-75a008f9-156bb725 {"name":"projects/ai-tools-6d313/locations/us-central1/operations/operation-1733921650574-628fe180d03e3-75a008f9-156bb725","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2024-12-11T12:54:11.365459709Z","target":"projects/ai-tools-6d313/locations/us-central1/functions/scrapeTools","verb":"update","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/ai-tools-6d313/locations/us-central1/functions/scrapeTools","buildConfig":{"runtime":"nodejs18","entryPoint":"scrapeTools","source":{"storageSource":{"bucket":"gcf-v2-sources-757878003660-us-central1","object":"scrapeTools/function-source.zip","generation":"1733921651293082"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/ai-tools-6d313/locations/us-central1/repositories/gcf-artifacts","sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-757878003660-us-central1","object":"scrapeTools/function-source.zip","generation":"1733920236299582"}},"dockerRegistry":"ARTIFACT_REGISTRY","serviceAccount":"projects/ai-tools-6d313/serviceAccounts/757878003660-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/ai-tools-6d313/locations/us-central1/services/scrapetools","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"ai-tools-6d313\",\"databaseURL\":\"https://ai-tools-6d313-default-rtdb.firebaseio.com\",\"storageBucket\":\"ai-tools-6d313.firebasestorage.app\"}","GCLOUD_PROJECT":"ai-tools-6d313","EVENTARC_CLOUD_EVENT_SOURCE":"projects/ai-tools-6d313/locations/us-central1/services/scrapeTools","FUNCTION_TARGET":"scrapeTools","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","uri":"https://scrapetools-paa7ytvw4q-uc.a.run.app","serviceAccountEmail":"757878003660-compute@developer.gserviceaccount.com","availableMemory":"256Mi","allTrafficOnLatestRevision":true,"revision":"scrapetools-00001-qoq","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"state":"ACTIVE","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"ba5982bc5bb793768822ebd53b90a22a7263b1a6"},"environment":"GEN_2","url":"https://us-central1-ai-tools-6d313.cloudfunctions.net/scrapeTools"},"stages":[{"name":"BUILD","message":"Build in progress","state":"IN_PROGRESS","resource":"projects/757878003660/locations/us-central1/builds/e75fa158-6fa2-43c8-907e-88939d4e4f88","resourceUri":"https://console.cloud.google.com/cloud-build/builds;region=us-central1/e75fa158-6fa2-43c8-907e-88939d4e4f88?project=757878003660"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"UPDATE_FUNCTION","buildName":"projects/757878003660/locations/us-central1/builds/e75fa158-6fa2-43c8-907e-88939d4e4f88"},"done":false}
+[debug] [2024-12-11T12:54:30.286Z] [update-default-us-central1-scrapeTools] Retrying task index 0
+[debug] [2024-12-11T12:54:30.286Z] Checked if tokens are valid: true, expires at: 1733923467492
+[debug] [2024-12-11T12:54:30.286Z] Checked if tokens are valid: true, expires at: 1733923467492
+[debug] [2024-12-11T12:54:30.286Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/ai-tools-6d313/locations/us-central1/operations/operation-1733921650574-628fe180d03e3-75a008f9-156bb725 [none]
+[debug] [2024-12-11T12:54:31.307Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/ai-tools-6d313/locations/us-central1/operations/operation-1733921650574-628fe180d03e3-75a008f9-156bb725 200
+[debug] [2024-12-11T12:54:31.307Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/ai-tools-6d313/locations/us-central1/operations/operation-1733921650574-628fe180d03e3-75a008f9-156bb725 {"name":"projects/ai-tools-6d313/locations/us-central1/operations/operation-1733921650574-628fe180d03e3-75a008f9-156bb725","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2024-12-11T12:54:11.365459709Z","target":"projects/ai-tools-6d313/locations/us-central1/functions/scrapeTools","verb":"update","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/ai-tools-6d313/locations/us-central1/functions/scrapeTools","buildConfig":{"runtime":"nodejs18","entryPoint":"scrapeTools","source":{"storageSource":{"bucket":"gcf-v2-sources-757878003660-us-central1","object":"scrapeTools/function-source.zip","generation":"1733921651293082"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/ai-tools-6d313/locations/us-central1/repositories/gcf-artifacts","sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-757878003660-us-central1","object":"scrapeTools/function-source.zip","generation":"1733920236299582"}},"dockerRegistry":"ARTIFACT_REGISTRY","serviceAccount":"projects/ai-tools-6d313/serviceAccounts/757878003660-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/ai-tools-6d313/locations/us-central1/services/scrapetools","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"ai-tools-6d313\",\"databaseURL\":\"https://ai-tools-6d313-default-rtdb.firebaseio.com\",\"storageBucket\":\"ai-tools-6d313.firebasestorage.app\"}","GCLOUD_PROJECT":"ai-tools-6d313","EVENTARC_CLOUD_EVENT_SOURCE":"projects/ai-tools-6d313/locations/us-central1/services/scrapeTools","FUNCTION_TARGET":"scrapeTools","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","uri":"https://scrapetools-paa7ytvw4q-uc.a.run.app","serviceAccountEmail":"757878003660-compute@developer.gserviceaccount.com","availableMemory":"256Mi","allTrafficOnLatestRevision":true,"revision":"scrapetools-00001-qoq","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"state":"ACTIVE","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"ba5982bc5bb793768822ebd53b90a22a7263b1a6"},"environment":"GEN_2","url":"https://us-central1-ai-tools-6d313.cloudfunctions.net/scrapeTools"},"stages":[{"name":"BUILD","message":"Build in progress","state":"IN_PROGRESS","resource":"projects/757878003660/locations/us-central1/builds/e75fa158-6fa2-43c8-907e-88939d4e4f88","resourceUri":"https://console.cloud.google.com/cloud-build/builds;region=us-central1/e75fa158-6fa2-43c8-907e-88939d4e4f88?project=757878003660"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"UPDATE_FUNCTION","buildName":"projects/757878003660/locations/us-central1/builds/e75fa158-6fa2-43c8-907e-88939d4e4f88"},"done":false}
+[debug] [2024-12-11T12:54:41.308Z] [update-default-us-central1-scrapeTools] Retrying task index 0
+[debug] [2024-12-11T12:54:41.309Z] Checked if tokens are valid: true, expires at: 1733923467492
+[debug] [2024-12-11T12:54:41.309Z] Checked if tokens are valid: true, expires at: 1733923467492
+[debug] [2024-12-11T12:54:41.309Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/ai-tools-6d313/locations/us-central1/operations/operation-1733921650574-628fe180d03e3-75a008f9-156bb725 [none]
+[debug] [2024-12-11T12:54:42.305Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/ai-tools-6d313/locations/us-central1/operations/operation-1733921650574-628fe180d03e3-75a008f9-156bb725 200
+[debug] [2024-12-11T12:54:42.305Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/ai-tools-6d313/locations/us-central1/operations/operation-1733921650574-628fe180d03e3-75a008f9-156bb725 {"name":"projects/ai-tools-6d313/locations/us-central1/operations/operation-1733921650574-628fe180d03e3-75a008f9-156bb725","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2024-12-11T12:54:11.365459709Z","target":"projects/ai-tools-6d313/locations/us-central1/functions/scrapeTools","verb":"update","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/ai-tools-6d313/locations/us-central1/functions/scrapeTools","buildConfig":{"runtime":"nodejs18","entryPoint":"scrapeTools","source":{"storageSource":{"bucket":"gcf-v2-sources-757878003660-us-central1","object":"scrapeTools/function-source.zip","generation":"1733921651293082"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/ai-tools-6d313/locations/us-central1/repositories/gcf-artifacts","sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-757878003660-us-central1","object":"scrapeTools/function-source.zip","generation":"1733920236299582"}},"dockerRegistry":"ARTIFACT_REGISTRY","serviceAccount":"projects/ai-tools-6d313/serviceAccounts/757878003660-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/ai-tools-6d313/locations/us-central1/services/scrapetools","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"ai-tools-6d313\",\"databaseURL\":\"https://ai-tools-6d313-default-rtdb.firebaseio.com\",\"storageBucket\":\"ai-tools-6d313.firebasestorage.app\"}","GCLOUD_PROJECT":"ai-tools-6d313","EVENTARC_CLOUD_EVENT_SOURCE":"projects/ai-tools-6d313/locations/us-central1/services/scrapeTools","FUNCTION_TARGET":"scrapeTools","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","uri":"https://scrapetools-paa7ytvw4q-uc.a.run.app","serviceAccountEmail":"757878003660-compute@developer.gserviceaccount.com","availableMemory":"256Mi","allTrafficOnLatestRevision":true,"revision":"scrapetools-00001-qoq","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"state":"ACTIVE","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"ba5982bc5bb793768822ebd53b90a22a7263b1a6"},"environment":"GEN_2","url":"https://us-central1-ai-tools-6d313.cloudfunctions.net/scrapeTools"},"stages":[{"name":"BUILD","message":"Build in progress","state":"IN_PROGRESS","resource":"projects/757878003660/locations/us-central1/builds/e75fa158-6fa2-43c8-907e-88939d4e4f88","resourceUri":"https://console.cloud.google.com/cloud-build/builds;region=us-central1/e75fa158-6fa2-43c8-907e-88939d4e4f88?project=757878003660"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"UPDATE_FUNCTION","buildName":"projects/757878003660/locations/us-central1/builds/e75fa158-6fa2-43c8-907e-88939d4e4f88"},"done":false}
+[debug] [2024-12-11T12:54:52.307Z] [update-default-us-central1-scrapeTools] Retrying task index 0
+[debug] [2024-12-11T12:54:52.307Z] Checked if tokens are valid: true, expires at: 1733923467492
+[debug] [2024-12-11T12:54:52.307Z] Checked if tokens are valid: true, expires at: 1733923467492
+[debug] [2024-12-11T12:54:52.307Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/ai-tools-6d313/locations/us-central1/operations/operation-1733921650574-628fe180d03e3-75a008f9-156bb725 [none]
+[debug] [2024-12-11T12:54:53.264Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/ai-tools-6d313/locations/us-central1/operations/operation-1733921650574-628fe180d03e3-75a008f9-156bb725 200
+[debug] [2024-12-11T12:54:53.264Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/ai-tools-6d313/locations/us-central1/operations/operation-1733921650574-628fe180d03e3-75a008f9-156bb725 {"name":"projects/ai-tools-6d313/locations/us-central1/operations/operation-1733921650574-628fe180d03e3-75a008f9-156bb725","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2024-12-11T12:54:11.365459709Z","endTime":"2024-12-11T12:54:42.957780957Z","target":"projects/ai-tools-6d313/locations/us-central1/functions/scrapeTools","verb":"update","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/ai-tools-6d313/locations/us-central1/functions/scrapeTools","buildConfig":{"runtime":"nodejs18","entryPoint":"scrapeTools","source":{"storageSource":{"bucket":"gcf-v2-sources-757878003660-us-central1","object":"scrapeTools/function-source.zip","generation":"1733921651293082"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/ai-tools-6d313/locations/us-central1/repositories/gcf-artifacts","sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-757878003660-us-central1","object":"scrapeTools/function-source.zip","generation":"1733920236299582"}},"dockerRegistry":"ARTIFACT_REGISTRY","serviceAccount":"projects/ai-tools-6d313/serviceAccounts/757878003660-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/ai-tools-6d313/locations/us-central1/services/scrapetools","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"ai-tools-6d313\",\"databaseURL\":\"https://ai-tools-6d313-default-rtdb.firebaseio.com\",\"storageBucket\":\"ai-tools-6d313.firebasestorage.app\"}","GCLOUD_PROJECT":"ai-tools-6d313","EVENTARC_CLOUD_EVENT_SOURCE":"projects/ai-tools-6d313/locations/us-central1/services/scrapeTools","FUNCTION_TARGET":"scrapeTools","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","uri":"https://scrapetools-paa7ytvw4q-uc.a.run.app","serviceAccountEmail":"757878003660-compute@developer.gserviceaccount.com","availableMemory":"256Mi","allTrafficOnLatestRevision":true,"revision":"scrapetools-00001-qoq","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"state":"ACTIVE","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"ba5982bc5bb793768822ebd53b90a22a7263b1a6"},"environment":"GEN_2","url":"https://us-central1-ai-tools-6d313.cloudfunctions.net/scrapeTools"},"stages":[{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"UPDATE_FUNCTION"},"done":true,"error":{"code":3,"message":"Build failed with status: FAILURE and message: npm error code ERESOLVE\nnpm error ERESOLVE could not resolve\nnpm error\nnpm error While resolving: chrome-aws-lambda@10.1.0\nnpm error Found: puppeteer-core@23.10.3\nnpm error node_modules/puppeteer-core\nnpm error   puppeteer-core@\"^23.10.3\" from the root project\nnpm error   puppeteer-core@\"23.10.3\" from puppeteer@23.10.3\nnpm error   node_modules/puppeteer\nnpm error     puppeteer@\"^23.10.3\" from the root project\nnpm error\nnpm error Could not resolve dependency:\nnpm error peer puppeteer-core@\"^10.1.0\" from chrome-aws-lambda@10.1.0\nnpm error node_modules/chrome-aws-lambda\nnpm error   chrome-aws-lambda@\"^10.1.0\" from the root project\nnpm error\nnpm error Conflicting peer dependency: puppeteer-core@10.4.0\nnpm error node_modules/puppeteer-core\nnpm error   peer puppeteer-core@\"^10.1.0\" from chrome-aws-lambda@10.1.0\nnpm error   node_modules/chrome-aws-lambda\nnpm error     chrome-aws-lambda@\"^10.1.0\" from the root project\nnpm error\nnpm error Fix the upstream dependency conflict, or retry\nnpm error this command with --force or --legacy-peer-deps\nnpm error to accept an incorrect (and potentially broken) dependency resolution.\nnpm error\nnpm error\nnpm error For a full report see:\nnpm error /www-data-home/.npm/_logs/2024-12-11T12_54_33_400Z-eresolve-report.txt\nnpm error A complete log of this run can be found in: /www-data-home/.npm/_logs/2024-12-11T12_54_33_400Z-debug-0.log. For more details see the logs at https://console.cloud.google.com/cloud-build/builds;region=us-central1/e75fa158-6fa2-43c8-907e-88939d4e4f88?project=757878003660."}}
+[debug] [2024-12-11T12:54:53.265Z] Got source token undefined for region us-central1
+[error] Build failed with status: FAILURE and message: npm error code ERESOLVE
+npm error ERESOLVE could not resolve
+npm error
+npm error While resolving: chrome-aws-lambda@10.1.0
+npm error Found: puppeteer-core@23.10.3
+npm error node_modules/puppeteer-core
+npm error   puppeteer-core@"^23.10.3" from the root project
+npm error   puppeteer-core@"23.10.3" from puppeteer@23.10.3
+npm error   node_modules/puppeteer
+npm error     puppeteer@"^23.10.3" from the root project
+npm error
+npm error Could not resolve dependency:
+npm error peer puppeteer-core@"^10.1.0" from chrome-aws-lambda@10.1.0
+npm error node_modules/chrome-aws-lambda
+npm error   chrome-aws-lambda@"^10.1.0" from the root project
+npm error
+npm error Conflicting peer dependency: puppeteer-core@10.4.0
+npm error node_modules/puppeteer-core
+npm error   peer puppeteer-core@"^10.1.0" from chrome-aws-lambda@10.1.0
+npm error   node_modules/chrome-aws-lambda
+npm error     chrome-aws-lambda@"^10.1.0" from the root project
+npm error
+npm error Fix the upstream dependency conflict, or retry
+npm error this command with --force or --legacy-peer-deps
+npm error to accept an incorrect (and potentially broken) dependency resolution.
+npm error
+npm error
+npm error For a full report see:
+npm error /www-data-home/.npm/_logs/2024-12-11T12_54_33_400Z-eresolve-report.txt
+npm error A complete log of this run can be found in: /www-data-home/.npm/_logs/2024-12-11T12_54_33_400Z-debug-0.log. For more details see the logs at https://console.cloud.google.com/cloud-build/builds;region=us-central1/e75fa158-6fa2-43c8-907e-88939d4e4f88?project=757878003660.
+[debug] [2024-12-11T12:54:53.275Z] Total Function Deployment time: 43685
+[debug] [2024-12-11T12:54:53.275Z] 1 Functions Deployed
+[debug] [2024-12-11T12:54:53.275Z] 1 Functions Errored
+[debug] [2024-12-11T12:54:53.275Z] 0 Function Deployments Aborted
+[debug] [2024-12-11T12:54:53.275Z] Average Function Deployment time: 43685
+[info] 
+[info] Functions deploy had errors with the following functions:
+	scrapeTools(us-central1)
+[debug] [2024-12-11T12:54:53.966Z] Not printing URL for HTTPS function. Typically this means it didn't match a filter or we failed deployment
+[info] i  functions: cleaning up build files... 
+[debug] [2024-12-11T12:54:53.967Z] Checked if tokens are valid: true, expires at: 1733923467492
+[debug] [2024-12-11T12:54:53.967Z] Checked if tokens are valid: true, expires at: 1733923467492
+[debug] [2024-12-11T12:54:53.967Z] Checked if tokens are valid: true, expires at: 1733923467492
+[debug] [2024-12-11T12:54:53.967Z] Checked if tokens are valid: true, expires at: 1733923467492
+[debug] [2024-12-11T12:54:53.968Z] >>> [apiv2][query] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/ai-tools-6d313/locations/us-central1/repositories/gcf-artifacts/packages/scrape_tools [none]
+[debug] [2024-12-11T12:54:53.968Z] >>> [apiv2][query] GET https://us.gcr.io/v2/ai-tools-6d313/gcf/us-central1/tags/list [none]
+[debug] [2024-12-11T12:54:54.818Z] <<< [apiv2][status] GET https://us.gcr.io/v2/ai-tools-6d313/gcf/us-central1/tags/list 404
+[debug] [2024-12-11T12:54:54.818Z] <<< [apiv2][body] GET https://us.gcr.io/v2/ai-tools-6d313/gcf/us-central1/tags/list {"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}]}
+[debug] [2024-12-11T12:54:54.818Z] Failed docker command with error  Request to https://us.gcr.io/v2/ai-tools-6d313/gcf/us-central1/tags/list had HTTP Error: 404, Not Found {"name":"FirebaseError","children":[],"context":{"body":{"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}],"error":{"message":"Not Found"}},"response":{"statusCode":404}},"exit":1,"message":"Request to https://us.gcr.io/v2/ai-tools-6d313/gcf/us-central1/tags/list had HTTP Error: 404, Not Found","status":404}
+[debug] [2024-12-11T12:54:54.820Z] Checked if tokens are valid: true, expires at: 1733923467492
+[debug] [2024-12-11T12:54:54.820Z] Checked if tokens are valid: true, expires at: 1733923467492
+[debug] [2024-12-11T12:54:54.820Z] >>> [apiv2][query] GET https://us.gcr.io/v2/ai-tools-6d313/gcf/us-central1/tags/list [none]
+[debug] [2024-12-11T12:54:55.168Z] <<< [apiv2][status] GET https://us.gcr.io/v2/ai-tools-6d313/gcf/us-central1/tags/list 404
+[debug] [2024-12-11T12:54:55.168Z] <<< [apiv2][body] GET https://us.gcr.io/v2/ai-tools-6d313/gcf/us-central1/tags/list {"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}]}
+[debug] [2024-12-11T12:54:55.168Z] Failed docker command with error  Request to https://us.gcr.io/v2/ai-tools-6d313/gcf/us-central1/tags/list had HTTP Error: 404, Not Found {"name":"FirebaseError","children":[],"context":{"body":{"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}],"error":{"message":"Not Found"}},"response":{"statusCode":404}},"exit":1,"message":"Request to https://us.gcr.io/v2/ai-tools-6d313/gcf/us-central1/tags/list had HTTP Error: 404, Not Found","status":404}
+[debug] [2024-12-11T12:54:55.270Z] Checked if tokens are valid: true, expires at: 1733923467492
+[debug] [2024-12-11T12:54:55.270Z] Checked if tokens are valid: true, expires at: 1733923467492
+[debug] [2024-12-11T12:54:55.270Z] >>> [apiv2][query] GET https://us.gcr.io/v2/ai-tools-6d313/gcf/us-central1/tags/list [none]
+[debug] [2024-12-11T12:54:55.465Z] <<< [apiv2][status] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/ai-tools-6d313/locations/us-central1/repositories/gcf-artifacts/packages/scrape_tools 404
+[debug] [2024-12-11T12:54:55.465Z] <<< [apiv2][body] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/ai-tools-6d313/locations/us-central1/repositories/gcf-artifacts/packages/scrape_tools {"error":{"code":404,"message":"Package \"projects/ai-tools-6d313/locations/us-central1/repositories/gcf-artifacts/packages/scrape_tools\" was not found.","status":"NOT_FOUND"}}
+[debug] [2024-12-11T12:54:55.634Z] <<< [apiv2][status] GET https://us.gcr.io/v2/ai-tools-6d313/gcf/us-central1/tags/list 404
+[debug] [2024-12-11T12:54:55.634Z] <<< [apiv2][body] GET https://us.gcr.io/v2/ai-tools-6d313/gcf/us-central1/tags/list {"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}]}
+[debug] [2024-12-11T12:54:55.634Z] Failed docker command with error  Request to https://us.gcr.io/v2/ai-tools-6d313/gcf/us-central1/tags/list had HTTP Error: 404, Not Found {"name":"FirebaseError","children":[],"context":{"body":{"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}],"error":{"message":"Not Found"}},"response":{"statusCode":404}},"exit":1,"message":"Request to https://us.gcr.io/v2/ai-tools-6d313/gcf/us-central1/tags/list had HTTP Error: 404, Not Found","status":404}
+[warn] ⚠  functions: Unhandled error cleaning up build images. This could result in a small monthly bill if not corrected. You can attempt to delete these images by redeploying or you can delete them manually at https://console.cloud.google.com/gcr/images/ai-tools-6d313/us/gcf 
+[debug] [2024-12-11T12:54:55.634Z] Functions deploy failed.
+[debug] [2024-12-11T12:54:55.634Z] {
+  "endpoint": {
+    "id": "scrapeTools",
+    "project": "ai-tools-6d313",
+    "region": "us-central1",
+    "entryPoint": "scrapeTools",
+    "platform": "gcfv2",
+    "runtime": "nodejs18",
+    "httpsTrigger": {},
+    "labels": {
+      "deployment-tool": "cli-firebase"
+    },
+    "ingressSettings": null,
+    "availableMemoryMb": null,
+    "serviceAccount": null,
+    "timeoutSeconds": null,
+    "maxInstances": null,
+    "minInstances": null,
+    "concurrency": 80,
+    "vpc": null,
+    "environmentVariables": {
+      "FIREBASE_CONFIG": "{\"projectId\":\"ai-tools-6d313\",\"databaseURL\":\"https://ai-tools-6d313-default-rtdb.firebaseio.com\",\"storageBucket\":\"ai-tools-6d313.firebasestorage.app\"}",
+      "GCLOUD_PROJECT": "ai-tools-6d313",
+      "EVENTARC_CLOUD_EVENT_SOURCE": "projects/ai-tools-6d313/locations/us-central1/services/scrapeTools",
+      "FUNCTION_TARGET": "scrapeTools",
+      "LOG_EXECUTION_ID": "true"
+    },
+    "codebase": "default",
+    "runServiceId": "scrapetools",
+    "cpu": 1,
+    "securityLevel": "SECURE_ALWAYS",
+    "targetedByOnly": false,
+    "hash": "ba5982bc5bb793768822ebd53b90a22a7263b1a6"
+  },
+  "op": "update",
+  "original": {
+    "name": "FirebaseError",
+    "children": [],
+    "exit": 1,
+    "message": "Build failed with status: FAILURE and message: npm error code ERESOLVE\nnpm error ERESOLVE could not resolve\nnpm error\nnpm error While resolving: chrome-aws-lambda@10.1.0\nnpm error Found: puppeteer-core@23.10.3\nnpm error node_modules/puppeteer-core\nnpm error   puppeteer-core@\"^23.10.3\" from the root project\nnpm error   puppeteer-core@\"23.10.3\" from puppeteer@23.10.3\nnpm error   node_modules/puppeteer\nnpm error     puppeteer@\"^23.10.3\" from the root project\nnpm error\nnpm error Could not resolve dependency:\nnpm error peer puppeteer-core@\"^10.1.0\" from chrome-aws-lambda@10.1.0\nnpm error node_modules/chrome-aws-lambda\nnpm error   chrome-aws-lambda@\"^10.1.0\" from the root project\nnpm error\nnpm error Conflicting peer dependency: puppeteer-core@10.4.0\nnpm error node_modules/puppeteer-core\nnpm error   peer puppeteer-core@\"^10.1.0\" from chrome-aws-lambda@10.1.0\nnpm error   node_modules/chrome-aws-lambda\nnpm error     chrome-aws-lambda@\"^10.1.0\" from the root project\nnpm error\nnpm error Fix the upstream dependency conflict, or retry\nnpm error this command with --force or --legacy-peer-deps\nnpm error to accept an incorrect (and potentially broken) dependency resolution.\nnpm error\nnpm error\nnpm error For a full report see:\nnpm error /www-data-home/.npm/_logs/2024-12-11T12_54_33_400Z-eresolve-report.txt\nnpm error A complete log of this run can be found in: /www-data-home/.npm/_logs/2024-12-11T12_54_33_400Z-debug-0.log. For more details see the logs at https://console.cloud.google.com/cloud-build/builds;region=us-central1/e75fa158-6fa2-43c8-907e-88939d4e4f88?project=757878003660.",
+    "original": {
+      "code": 3,
+      "message": "Build failed with status: FAILURE and message: npm error code ERESOLVE\nnpm error ERESOLVE could not resolve\nnpm error\nnpm error While resolving: chrome-aws-lambda@10.1.0\nnpm error Found: puppeteer-core@23.10.3\nnpm error node_modules/puppeteer-core\nnpm error   puppeteer-core@\"^23.10.3\" from the root project\nnpm error   puppeteer-core@\"23.10.3\" from puppeteer@23.10.3\nnpm error   node_modules/puppeteer\nnpm error     puppeteer@\"^23.10.3\" from the root project\nnpm error\nnpm error Could not resolve dependency:\nnpm error peer puppeteer-core@\"^10.1.0\" from chrome-aws-lambda@10.1.0\nnpm error node_modules/chrome-aws-lambda\nnpm error   chrome-aws-lambda@\"^10.1.0\" from the root project\nnpm error\nnpm error Conflicting peer dependency: puppeteer-core@10.4.0\nnpm error node_modules/puppeteer-core\nnpm error   peer puppeteer-core@\"^10.1.0\" from chrome-aws-lambda@10.1.0\nnpm error   node_modules/chrome-aws-lambda\nnpm error     chrome-aws-lambda@\"^10.1.0\" from the root project\nnpm error\nnpm error Fix the upstream dependency conflict, or retry\nnpm error this command with --force or --legacy-peer-deps\nnpm error to accept an incorrect (and potentially broken) dependency resolution.\nnpm error\nnpm error\nnpm error For a full report see:\nnpm error /www-data-home/.npm/_logs/2024-12-11T12_54_33_400Z-eresolve-report.txt\nnpm error A complete log of this run can be found in: /www-data-home/.npm/_logs/2024-12-11T12_54_33_400Z-debug-0.log. For more details see the logs at https://console.cloud.google.com/cloud-build/builds;region=us-central1/e75fa158-6fa2-43c8-907e-88939d4e4f88?project=757878003660."
+    },
+    "status": 3,
+    "code": 3
+  }
+}
+[debug] [2024-12-11T12:54:55.880Z] Error: Failed to update function scrapeTools in region us-central1
+    at /usr/local/lib/node_modules/firebase-tools/lib/deploy/functions/release/fabricator.js:399:19
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Fabricator.updateV2Function (/usr/local/lib/node_modules/firebase-tools/lib/deploy/functions/release/fabricator.js:388:32)
+    at async Fabricator.updateEndpoint (/usr/local/lib/node_modules/firebase-tools/lib/deploy/functions/release/fabricator.js:155:13)
+    at async handle (/usr/local/lib/node_modules/firebase-tools/lib/deploy/functions/release/fabricator.js:89:17)
+[error] 
+[error] Error: There was an error deploying functions
