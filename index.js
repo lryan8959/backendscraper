@@ -13,13 +13,10 @@ const PORT = process.env.PORT || 5000;
 
 // Ensure corsOptions is declared
 const corsOptions = {
-    origin: '*', // Allow all origins
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    allowedHeaders: ['Content-Type', 'Authorization'],
-  };
-
-  
-app.use(cors(corsOptions));
+  origin: '*', // Allow all origins
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+};
 
 
 app.use(cors(corsOptions));
