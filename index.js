@@ -11,7 +11,15 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 
-app.use(cors());
+// Ensure corsOptions is declared
+const corsOptions = {
+    origin: '*', // Allow all origins
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+  };
+
+  
+app.use(cors(corsOptions));
 
 
 app.use(cors(corsOptions));
